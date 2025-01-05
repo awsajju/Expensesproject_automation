@@ -24,13 +24,13 @@ Check_Out
 
 Validate(){
     if [ $1 -ne 0 ];then 
-    {
+    
         echo -e "$2 Installing package is --> $R failure $N" &>>$LOG_FILE_NAME
         exit 1
     else 
         echo -e "$2 installing package is --->$G Success $N" &>>$LOG_FILE_NAME
     fi
-    }
+    
 }
 
 dnf install mysql-server -y &>>$LOG_FILE_NAME
