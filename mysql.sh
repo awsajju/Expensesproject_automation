@@ -34,17 +34,17 @@ Validate(){
 }
 
 dnf install mysql-server -y &>>$LOG_FILE_NAME
- validate $? "installing msql-serever"
+ Validate $? "installing msql-serever"
 
 systemctl enable mysqld &>>$LOG_FILE_NAME
 
-validate $? "Enabling mysqld server"
+Validate $? "Enabling mysqld server"
 
 systemctl start mysqld &>>$LOG_FILE_NAME
-validate $? "Starting mysql server"
+Validate $? "Starting mysql server"
 
 mysql_secure_installation --set-root-pass ExpenseApp@1
-validate $? ""setting root password
+Validate $? ""setting root password
 
 
 
