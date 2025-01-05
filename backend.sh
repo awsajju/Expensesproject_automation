@@ -13,10 +13,10 @@ LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP"
 
 validate(){
     if [ $1 -ne 0 ];then
-        echo "$2 $R fialure $N"
+        echo -e "$2 $R fialure $N"
         exit 1
     else
-        echo "$2 $G Success $N"
+        echo -e "$2 $G Success $N"
     fi
 }
 
