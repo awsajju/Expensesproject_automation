@@ -25,16 +25,16 @@ Check_Out
 Validate(){
     if [ $1 -ne 0 ];then 
     
-        echo -e "$2 Installing package is --> $R failure $N" &>>$LOG_FILE_NAME
+        echo -e "$2  $R failure $N" 
         exit 1
     else 
-        echo -e "$2 installing package is --->$G Success $N" &>>$LOG_FILE_NAME
+        echo -e "$2 $G Success $N"
     fi
     
 }
 
 dnf install mysql-server -y &>>$LOG_FILE_NAME
- Validate $? "installing msql-serever"
+ Validate $? "installing msql-server"
 
 systemctl enable mysqld &>>$LOG_FILE_NAME
 
@@ -43,7 +43,7 @@ Validate $? "Enabling mysqld server"
 systemctl start mysqld &>>$LOG_FILE_NAME
 Validate $? "Starting mysql server"
 
-mysql -h myfooddy.fun -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
+mysql -h mysql.myfooddy.fun -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ];then
     echo "MYSQL root password not setup" &>>$LOG_FILE_NAME
