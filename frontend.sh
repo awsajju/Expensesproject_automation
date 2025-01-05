@@ -14,7 +14,7 @@ LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP"
 
 validate(){
     if [ $1 -ne 0 ];then
-        echo -e "$2 $R fialure $N"
+        echo -e "$2 $R failure $N"
         exit 1
     else
         echo -e "$2 $G Success $N"
@@ -53,7 +53,7 @@ curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expe
 validate $? "dowloading code"
 
 cd /usr/share/nginx/html &>>$LOG_FILE_NAME
-validate $? "movbie to html directory"
+validate $? "move to html directory"
 
 unzip /tmp/frontend.zip &>>$LOG_FILE_NAME
 validate $? "unziping the frontend code"
