@@ -48,7 +48,7 @@ else
     echo -e "expenser user already exists"
 fi
 
-mkdir /app &>>$LOG_FILE_NAME
+mkdir -p /app &>>$LOG_FILE_NAME
 
 validate $? "creating app directory"
 
