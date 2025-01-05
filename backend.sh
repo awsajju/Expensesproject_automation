@@ -64,7 +64,7 @@ validate $? "unzip backend"
 npm install &>>$LOG_FILE_NAME
 validate $? "installing dependencies"
 
-cp /home/ec2-user/EXPENSESPROJECT_AUTOMATION/backend.services /etc/systemd/system/backend.service
+cp /c/Users/user/EXPENSESPROJECT_AUTOMATION/backend.services /etc/systemd/system/backend.service
 
 # prepare MYSQL Schema
 
