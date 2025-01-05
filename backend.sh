@@ -46,7 +46,7 @@ if [ $? -ne 0 ];then
     validate $? "adding expenses user"
 else
     echo -e "expenser user already exists"
-
+fi
 
 mkdir /app &>>$LOG_FILE_NAME
 
