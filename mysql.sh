@@ -43,7 +43,7 @@ Validate $? "Enabling mysqld server"
 systemctl start mysqld &>>$LOG_FILE_NAME
 Validate $? "Starting mysql server"
 
-mysql -h myfooddy.fun -u root -pExpenseApp@1 -e 'show database;' &>>$LOG_FILE_NAME
+mysql -h myfooddy.fun -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ];then
     echo "MYSQL root password not setup" &>>$LOG_FILE_NAME
