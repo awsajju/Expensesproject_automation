@@ -46,7 +46,7 @@ validate $? "starting nginx server"
 
 rm -rf /usr/share/nginx/html/* &>>$LOG_FILE_NAME
 
-validate $? "removing the existing code"
+validate $? "removing the existing code" &>>$LOG_FILE_NAME
 
 curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
 
