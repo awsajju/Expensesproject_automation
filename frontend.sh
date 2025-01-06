@@ -42,7 +42,7 @@ validate $? "Enabling nginx"
 
 systemctl start nginx &>>$LOG_FILE_NAME
 
-validate $? "starting nginx"
+validate $? "starting nginx server"
 
 rm -rf /usr/share/nginx/html/* &>>$LOG_FILE_NAME
 
